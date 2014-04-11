@@ -1,11 +1,16 @@
 {
   "name": "asmx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Asmx web service interface client helper",
-  "keywords": ["webservice", "asmx"],
+  "keywords": [
+    "webservice",
+    "asmx"
+  ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jshint": "jshint index.js lib test",
+    "mocha": "mocha --reporter spec",
+    "test": "npm run-script jshint && npm run-script mocha"
   },
   "author": "Peter Magnusson <peter@birchroad.net>",
   "license": "BSD-3-Clause",
@@ -15,7 +20,7 @@
     "url": "https://github.com/kmpm/node-asmx.git"
   },
   "dependencies": {
-    "q": "~1.0.1",
-    "superagent": "'~0.15.7'"
+    "q": "1.0.x",
+    "superagent": "0.17.x"
   }
 }
